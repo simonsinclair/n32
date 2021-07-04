@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/simonsinclair/n32/issues"
   },
-  "homepage": "https://github.com/simonsinclair/n32#readme"
+  "homepage": "https://github.com/simonsinclair/n32#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.30.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.3.2",
+    "typescript": "^4.3.5"
+  }
 }
