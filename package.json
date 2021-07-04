@@ -1,11 +1,23 @@
 {
-  "name": "n32",
+  "name": "@simonsinclair/n32",
   "version": "0.1.0",
   "description": "Express numbers in a form that can be conveniently and accurately transmitted between humans and computers.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "jest"
+    "prepare": "npm run build",
+    "dev": "tsc --watch --pretty",
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "types": "dist/index.d.ts",
+  "sideEffects": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/simonsinclair/n32.git"
@@ -15,17 +27,23 @@
     "douglas-crockford",
     "crockford"
   ],
-  "author": "Simon Sinclair",
+  "author": "Simon Sinclair <simon@simonsinclair.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/simonsinclair/n32/issues"
   },
   "homepage": "https://github.com/simonsinclair/n32#readme",
   "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-typescript": "^7.14.5",
+    "@types/jest": "^26.0.23",
     "@typescript-eslint/eslint-plugin": "^4.28.1",
     "@typescript-eslint/parser": "^4.28.1",
+    "babel-jest": "^27.0.6",
     "eslint": "^7.30.0",
     "eslint-config-prettier": "^8.3.0",
+    "jest": "^27.0.6",
     "prettier": "^2.3.2",
     "typescript": "^4.3.5"
   }
