@@ -1,0 +1,24 @@
+{
+  "name": "n32",
+  "version": "0.1.0",
+  "description": "Express numbers in a form that can be conveniently and accurately transmitted between humans and computers.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonsinclair/n32.git"
+  },
+  "keywords": [
+    "base32",
+    "douglas-crockford",
+    "crockford"
+  ],
+  "author": "Simon Sinclair",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simonsinclair/n32/issues"
+  },
+  "homepage": "https://github.com/simonsinclair/n32#readme"
+}
