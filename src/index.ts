@@ -7,6 +7,8 @@ export const getSymbol = (index: number): string => {
 };
 
 const n32 = (number: number): string => {
+  if (number < 32) return getSymbol(number);
+
   const BASE = 32;
   let m = '';
   let n = number;
