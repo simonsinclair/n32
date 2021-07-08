@@ -7,6 +7,7 @@ export const getSymbol = (index: number): string => {
 };
 
 const n32 = (number: number): string => {
+  if (number < 0) throw new Error('n32 expects an absolute number.');
   if (number < 32) return getSymbol(number);
 
   const BASE = 32;
