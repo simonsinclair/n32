@@ -6,6 +6,10 @@ export const getSymbol = (index: number): string => {
   return SYMBOLS.charAt(index);
 };
 
+export const getSymbolValue = (symbol: string): number => {
+  return '0123456789abcdefghjkmnpqrstvwxyz'.search(symbol);
+};
+
 const n32 = (number: number): string => {
   if (number < 0) throw new Error('n32 expects an absolute number.');
   if (number < 32) return getSymbol(number);
