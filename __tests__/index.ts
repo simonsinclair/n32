@@ -5,6 +5,7 @@ describe('n32', () => {
     expect(n32(0)).toBe('0');
     expect(n32(31)).toBe('z');
     expect(n32(32)).toBe('10');
+    expect(n32(1035280)).toBe('zk0g');
     expect(n32(Number.MAX_SAFE_INTEGER)).toBe('7zzzzzzzzzz');
   });
   it('throws an error', () => {
