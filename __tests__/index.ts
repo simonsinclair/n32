@@ -1,4 +1,4 @@
-import n32, { getSymbol } from '../dist';
+import n32, { n32decode, getSymbol, getSymbolValue } from '../dist';
 
 describe('n32', () => {
   it('returns a valid string', () => {
@@ -24,5 +24,14 @@ describe('getSymbol', () => {
     expect(() => getSymbol(32)).toThrowError(
       '"index" exceeds the length of symbols available.',
     );
+  });
+});
+
+describe('getSymbolValue', () => {
+  it('returns a valid symbol value', () => {
+    expect(getSymbolValue('0')).toBe(0);
+    expect(getSymbolValue('9')).toBe(9);
+    expect(getSymbolValue('a')).toBe(10);
+    expect(getSymbolValue('z')).toBe(31);
   });
 });
