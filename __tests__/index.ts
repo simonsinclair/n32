@@ -13,6 +13,16 @@ describe('n32', () => {
   });
 });
 
+describe('n32decode', () => {
+  it('returns a valid number', () => {
+    expect(n32decode('0')).toBe(0);
+    expect(n32decode('z')).toBe(31);
+    expect(n32decode('10')).toBe(32);
+    expect(n32decode('0zk0g')).toBe(1035280);
+    expect(n32decode('7zzzzzzzzzz')).toBe(Number.MAX_SAFE_INTEGER);
+  });
+});
+
 describe('getSymbol', () => {
   it('returns a valid symbol', () => {
     expect(getSymbol(0)).toBe('0');
